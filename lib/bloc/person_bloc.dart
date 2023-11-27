@@ -5,11 +5,13 @@ import 'package:task_08/bloc/person_states.dart';
 
 import '../models/userModel/person.dart';
 import '../services/apiService/api_service.dart';
+import '../services/data_manager.dart';
 import '../services/dio_client.dart';
 import '../services/hive_db.dart';
 
 class PersonBloc extends Bloc<FetchPersonEvent, PersonState> {
   final ApiService _apiService = ApiService(DioClient.init());
+  DataManager manager = DataManager();
 
   PersonBloc() : super(PersonLoadingState()) {
     on<FetchPersonEvent>(_onFetchPersonEvent);
@@ -24,6 +26,7 @@ class PersonBloc extends Bloc<FetchPersonEvent, PersonState> {
 
       final List<Person> persons = await _apiService.getData();
       HiveDB.box.addAll(persons);
+      manager.addDataToWidget(persons[1]);
 
       emit(PersonLoadedState(persons));
     } catch (e) {

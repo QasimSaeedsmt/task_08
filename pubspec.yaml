@@ -43,8 +43,15 @@ dependencies:
   dio: ^5.3.3
   retrofit: ^4.0.3
   json_annotation: ^4.8.1
-  http: ^1.1.0
   equatable: ^2.0.5
+  flutter_launcher_icons: ^0.13.1
+  #  app_widget: ^0.2.2
+  home_widget:
+
+
+  davinci: ^2.1.1
+  shared_preferences: ^2.2.2
+  path_provider_foundation: ^2.3.1
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +60,14 @@ dev_dependencies:
   build_runner:
   retrofit_generator:
   json_serializable: ^6.7.1
+  flutter_lints:
+  path_provider_platform_interface:
+  plugin_platform_interface:
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/icons/icon.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

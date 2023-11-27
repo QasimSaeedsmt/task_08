@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://reqres.in/api';
+    baseUrl ??= ConstantsResources.BASE_URL;
   }
 
   final Dio _dio;

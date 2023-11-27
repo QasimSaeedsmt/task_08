@@ -8,4 +8,5 @@ class ConstantsResources {
   static const double OPACITY_LEVEL = 0.5;
   static const List<Object> EMPTY_LIST = [];
   static const int SNACKBAR_DELAY = 3;
+  static const String GROUP_ID = "group.widget_info_group";
 }
